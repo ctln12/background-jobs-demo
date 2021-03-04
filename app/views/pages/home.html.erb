@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <h1>All Users</h1>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 15px; margin: 20px auto;">
+    <% @users.each do |user| %>
+      <div style="background-color: white; padding: 20px 25px 10px 25px;">
+        <h4 style="margin-bottom: 1rem;"><%= user.email %></h4>
+        <p>Admin: <%= user.admin %></p>
+        <p>Credit: <%= user.credit %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
